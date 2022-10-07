@@ -1,0 +1,68 @@
+.team-page {
+  align-items: flex-start;
+
+  h2 {
+    margin-bottom: 16px;
+  }
+  section {
+    width: 100%;
+    border-bottom: none;
+    padding: 0px;
+  }
+  .header {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .team-members, .board-and-advisory-members {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-member {
+    margin-right: 24px;
+    margin-bottom: 40px;
+  }
+  .board-or-advisory-member {
+    display: flex;
+    margin-bottom: 26px;
+    margin-right: 24px;
+    max-width: 300px;
+    width: 100%;
+    img {
+      margin-right: 16px;
+    }
+    div {
+      max-width: 212px;
+      width: 100%;
+      h4 {
+        margin-top: 0px;
+      }
+    }
+  }
+  .hiring-blurb {
+    border-radius: 6px;
+    border: solid 1px #d7d7d7;
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 32px;
+    align-items: center;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    margin-top: 0px !important;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.57;
+    margin-top: 8px;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 1.57;
+    color: #646464;
+  }
+}

@@ -1,0 +1,71 @@
+<head>
+  <% if Rails.env.development? %>
+    <title>[DEV] Quill.org | <%= @title || 'Interactive Writing and Grammar' %></title>
+    <%= favicon_link_tag 'favicon-dev.ico' %>
+  <% elsif Rails.env.staging? %>
+    <title>[Staging] Quill.org | <%= @title || 'Interactive Writing and Grammar' %></title>
+    <%= favicon_link_tag 'favicon-staging.ico' %>
+  <% else %>
+    <title>Quill.org | <%= @title || 'Interactive Writing and Grammar' %></title>
+    <%= favicon_link_tag 'favicon.ico' %>
+  <% end %>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content= "<%= @title || "Free tools to make your students better writers." %>" />
+  <meta property="og:image"              content=<%=@image_link || image_url('share/facebook.png') %> />
+
+  <meta name="description" content="<%= @description || @content %>">
+  <meta name="og:description" content="<%= @description || @content %>">
+  <link rel="apple-touch-icon" href="<%= ENV['CDN_URL'].gsub(/[‘’]/, '') + "/images/logos/apple-touch-icon.png" %>">
+
+  <script defer src=<%= ENV['FONT_AWESOME_KIT_LINK'] %> crossorigin="anonymous" integrity="sha384-p7JrABPXxZLpj1XoHTzkPyVs8ekVssRFXc4B7XU6Z1c8XVDA7sVPem/lQ9UouxqE"></script>
+  <!-- Inspectlet tracking -->
+  <% if ENV.fetch('SHOW_INSPECTLET', 'true') == 'true' %>
+    <% if current_user&.teacher? %>
+      <script type="text/javascript">
+        (function() {
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 392647994]);
+        var ldinsp = function(){
+        if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=392647994&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+        setTimeout(ldinsp, 0);
+        })();
+      </script>
+    <% end %>
+  <% end %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" lazyload>
+
+  <%= render partial: 'typekit' unless Rails.env.test? %>
+  <%= stylesheet_pack_tag('shared') %>
+  <% if !playing_activity? %>
+    <%= stylesheet_pack_tag('app') %>
+  <% end %>
+  <% if @style_file %>
+    <%= stylesheet_pack_tag(@style_file) %>
+  <% else %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <% end %>
+  <%= render partial: 'application/head_embed_codes' %>
+  <%= javascript_pack_tag((@js_file || 'app'), 'crossorigin': 'anonymous') %>
+  <%= csrf_meta_tags %>
+  <meta id='current-user-testing-flag' property="flag" content=<%= current_user&.testing_flag%> />
+  <meta id='current-user-id' property="id" content=<%= current_user&.id%> />
+  <meta id='current-user-is-premium?' property="is_premium?" content=<%= current_user&.is_premium?%> />
+  <meta id='current-user-email' property="email" content=<%= current_user&.email%> />
+
+<!--[if !IE 7]>
+  <style type="text/css">
+    #wrap { display: table ; height: 100% }
+  </style>
+<![endif]-->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>

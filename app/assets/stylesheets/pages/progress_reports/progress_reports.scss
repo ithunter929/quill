@@ -1,0 +1,303 @@
+.progress-report-symbol {
+  i, svg {
+    height: inherit;
+    line-height: inherit;
+  }
+}
+
+.progress-reports-standards-classroom-standards {
+  table {
+    margin-left: -10%;
+  }
+}
+
+.progress-reports-standards-classroom-students,
+.progress-reports-standards-standard-students,
+.progress-reports-concepts-students,
+.progress-reports-activities {
+  div.premium-status-none {
+    .student-filter span,
+    td:first-child {
+      -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+     -o-filter: blur(5px);
+     -ms-filter: blur(5px);
+     filter: blur(5px);
+    }
+  }
+}
+
+.progress-reports-concepts-concepts {
+  div.premium-status-none {
+    .non-premium-student {
+      h2 {
+        -webkit-filter: blur(8px);
+       -moz-filter: blur(8px);
+       -o-filter: blur(8px);
+       -ms-filter: blur(8px);
+       filter: blur(8px);
+     }
+      td:nth-child(2) {
+        -webkit-filter: blur(5px);
+       -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+       -ms-filter: blur(5px);
+       filter: blur(5px);
+      }
+    }
+  }
+}
+
+
+.premium-bar {
+  background: $darkorange;
+  color: white;
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.csv-email-modal p {
+  margin: 10px;
+}
+
+.progress-reports-nav {
+  .btn {
+    padding: 0;
+    border: 0;
+    margin-left: 10px;
+    line-height: 26px;
+    height: 26px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+}
+
+// The alignment of the link is off when it contains a button.
+a.progress-reports-nav {
+  padding-top: 14px !important;
+  padding-bottom: 15px !important;
+}
+
+
+.container.progress-report {
+  margin-bottom: 130px;
+}
+
+.progress-report {
+  a {
+    color: $darkgreen;
+    text-decoration: none;
+  }
+
+  .alert {
+    a {
+      padding-left: 1em;
+    }
+  }
+
+  .rt-table {
+    overflow: visible;
+  }
+
+  .rt-thead {
+    overflow: visible;
+  }
+
+  .rt-tbody {
+    overflow: visible;
+  }
+
+  table {
+
+    // All column sizes are based on 14px font
+    .proficient-column {
+      width: 115px;
+    }
+
+    .near-proficient-column {
+      width: 165px;
+    }
+
+    .not-proficient-column {
+      width: 146px;
+    }
+
+    .standard-level-column {
+      width: 155px;
+    }
+
+    .standard-name-column {
+      width: 400px;
+    }
+
+    .students-column {
+      width: 110px;
+    }
+
+    .activities-column {
+      width: 115px;
+    }
+
+    .standards-column {
+      width: 120px;
+    }
+
+    .class-name-column {
+      width: 120px;
+    }
+
+    .student-view-column {
+      width: 110px;
+    }
+
+    .standard-view-column {
+      width: 115px;
+    }
+
+    .student-name-column {
+      width: 150px;
+    }
+
+    .average-score-column {
+      width: 100px;
+    }
+
+    .overall-mastery-status-column {
+      width: 190px;
+    }
+
+    .mastery-status-column {
+      width: 145px;
+    }
+
+    .standard-prefix-column {
+      width: 80px;
+    }
+
+    .app-name-column {
+      width: 135px;
+    }
+
+    .score-column {
+      width: 65px;
+    }
+
+    .activity-name-column {
+      width: 250px;
+    }
+
+    .date-column {
+      width: 65px;
+    }
+  }
+
+  .breadcrumb {
+    margin-bottom: 10px;
+    a {
+      color: $quillforestgreen;
+    }
+    &.standards-breadcrumb {
+      font-size: 14px;
+      font-weight: 600;
+      color: #027360;
+      margin: 20px 0px 0px;
+      box-shadow: 0 0 black;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .export-csv {
+    float: right;
+    a {
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    img {
+      margin-left: 15px;
+    }
+  }
+
+  .fa-close {
+    font-size: 1.3em;
+  }
+
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+    text-align: center;
+  }
+
+  .header-section {
+    .description {
+      margin-top: 14px;
+    }
+  }
+
+  .pagination {
+    margin-top: 0; // Duplicated from elsewhere in the CSS
+  }
+
+}
+
+.progress-report-filters {
+  display: flex;
+  margin: 20px 0;
+
+  .dropdown__control {
+    background-color: transparent;
+  }
+
+  & > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 8px;
+
+  &.proficient {
+    @extend .icon-green;
+  }
+
+  &.near-proficient {
+    @extend .icon-orange;
+  }
+
+  &.not-proficient {
+    @extend .icon-red;
+  }
+}
+
+.activity-progress-report-container .dropdown-menu {
+  margin-left: 15px;
+  width: calc(100% - 30px);
+}

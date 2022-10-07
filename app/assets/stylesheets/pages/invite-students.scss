@@ -1,0 +1,265 @@
+.invite-students {
+  background-color: #f6f3f3;
+
+  .white-bg {
+    width: 280px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: solid 1px #737373;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .select-white-wrapper .dropdown-menu {
+    left: auto;
+    width: 280px;
+    top: auto;
+  }
+  .classroom-dropdown-row {
+    margin-top: 40px;
+    line-height: 1.22;
+    font-size: 18px;
+  }
+
+  .option-boxes {
+    display: flex;
+    justify-content: space-between;
+
+    .box-section {
+      display: inline-block;
+      margin-top: 38px;
+      max-width: 420px;
+      width: 100%;
+      height: 250px;
+      border-radius: 3px;
+      border: solid 1px #c0c0c0;
+    }
+  }
+
+    .box-top {
+      display: flex;
+      max-width: 418px;
+      width: 100%;
+      height: 59px;
+      // border-radius: 3px;
+      background-color: #ebebeb;
+      align-items: center;
+      border-bottom: solid 1px #c0c0c0;
+      h1 {
+        padding-left: 21px;
+        font-size: 18px;
+        max-width: 400px;
+        width: 100%;
+        span {
+          font-weight: bold;
+        }
+        img {
+          height: auto;
+          width: 33px;
+          float: right;
+          margin-top: -7px;
+        }
+      }
+    }
+    .box-content {
+      padding: 14px 20px;
+      &.google-classroom {
+        padding-top: 22px;
+        button {
+          display: block;
+          margin: 11px auto 0px;
+        }
+      }
+      p {
+        padding-bottom: 20px;
+      }
+      span {
+        font-weight: bold;
+      }
+      .class-code {
+        margin-left: 47px;
+        width: 188px;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: 1px;
+      }
+    }
+    .teacher-creates-accounts {
+        .option-boxes .box-section {
+          border: none;
+          .box-top {
+            border: none;
+            margin-left: -22px;
+            background-color: #f6f3f3;
+          }
+          .box-content {
+            padding-left: 0px;
+            padding-top: 0px;
+              h2 {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 15px;
+              }
+          }
+      }
+      .add-student-section {
+        margin-bottom: 32px;
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 21px;
+        }
+
+        .errors {
+          margin-top: 10px;
+        }
+
+        .input-row {
+          display: flex;
+          justify-content: space-between;
+          .name-input {
+            width: 188px;
+            height: 40px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            border: solid 1px #c0c0c0;
+            margin-right: 15px;
+          }
+          .button-green {
+            width: 148px;
+            border-radius: 6px;
+          }
+          .white-bg {
+            width: 248px;
+            padding: 10px 25px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+
+      .option-boxes, .input-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .group-together {
+        margin-bottom: 20px;
+      }
+      .empty {
+        display: none;;
+      }
+      .box-content, .box-section {
+        height: auto !important;
+        margin-top: 10px !important;
+      }
+      .add-student-section, .classroom-dropdown-row {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .box-top h1 img {
+        display: none;
+      }
+      .group-together {
+        display: flex;
+        flex-direction: column;
+        button {
+          width: 188px !important;
+        }
+        .name-input {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .class-code {
+        margin-left: 10px !important;
+      }
+    }
+
+  table {
+    margin-top: 20px;
+    border-collapse: separate;
+    a {
+      color: #027360;
+    }
+    thead {
+      background: #f7f5f5;
+      border: 1px solid #cecece;
+      tr th {
+        border-bottom: none;
+        border-top: 1px solid #cecece !important;
+        cursor: default;
+        background-color: #e6e6e6;
+        padding: 8px 12px;
+        transition: 0.1s ease-out;
+        -moz-transition: 0.1s ease-out;
+        -webkit-transition: 0.1s ease-out;
+        .fas{
+          float: right;
+          color: #737373;
+          font-size: 1.3em;
+        }
+        &.active {
+          background: #e6e6e6;
+        }
+        &:nth-child(1) {
+          width: 30%;
+          border-top-left-radius: 5px;
+          text-align: left;
+          border-left: 1px solid #cecece;
+        }
+        &:nth-child(2) {
+          width: 30%;
+          text-align: left;
+        }
+        &:nth-child(3) {
+          width: 40%;
+          text-align: left;
+          border-top-right-radius: 5px;
+          border-right: 1px solid #cecece;
+        }
+      }
+    }
+    tbody tr {
+      background: #f7f5f5;
+      width: 33%;
+      height: 60px;
+      td {
+        font-size: 14px;
+        padding: 20px 12px;
+        &:nth-child(1) {
+          text-align: left;
+          border-left: 1px solid #cecece;
+        }
+        &:nth-child(2) {
+          text-align: left;
+        }
+        &:nth-child(3) {
+          text-align: left;
+          border-right: 1px solid #cecece;
+        }
+      }
+      &:last-child td {
+        border-bottom: 1px solid #cecece;
+        &:first-child {
+          border-bottom-left-radius: 5px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+  .table > {
+    thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
+      vertical-align: middle;
+    }
+  }
+}

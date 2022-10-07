@@ -1,0 +1,35 @@
+.category-label {
+  display: inline-block;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  &.new-flag {
+    padding: 3px 6px;
+    margin-left: 10px;
+    margin-top: 11px;
+    line-height: 12px;
+    position: relative;
+    top: -10px;
+  }
+}
+
+.author-picture {
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    height: 100%;
+  }
+}

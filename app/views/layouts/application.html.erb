@@ -1,0 +1,58 @@
+<html lang='en'>
+  <%= render partial: 'head' %>
+  <script>
+    function handleTabNavigation(e) {
+      if (e.code !== 'Tab') { return }
+
+      const element = document.getElementById("body")
+      if (element) { element.classList.remove("hide-focus-outline") }
+    }
+  </script>
+  <script>
+    window.onload = function() {
+      var skipLinks = document.createElement("div");
+      skipLinks.innerHTML +=
+        '<a class="skip-main" href="#main-content">Skip to main content</a>';
+      document.body.insertBefore(skipLinks, document.body.firstChild);
+    }
+  </script>
+  <body class="hide-focus-outline" id="body" onkeydown="handleTabNavigation(event)">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, "<p>#{value}</p><i class='fas fa-times-circle' aria-hidden='true'></i>".html_safe, {class: "flash #{key}", onClick: "$(this).slideUp(300)"}) %>
+    <% end %>
+    <%= render partial: 'application/preview_student_banner' %>
+    <%= render partial: 'application/demo_account_banner' %>
+    <%= render partial: 'application/webinar_banner' %>
+    <% if ENV['UPGRADE'] && ENV['UPGRADE_END_TIME'] && Time.current < Time.parse(ENV['UPGRADE_END_TIME'])%>
+      <%= render partial: 'application/upgraded_bar' %>
+    <% else %>
+      <%= render partial: 'application/notification_bar' %>
+    <% end %>
+    <div id='application_nav_bar'>
+      <%= render partial: 'header', media: 'all', 'data-turbolinks-track' => true %>
+    </div>
+    <%= render partial: 'admin_dashboard_header' %>
+    <div id="main-content" class="page">
+      <%= yield %>
+    </div>
+    <!-- This is a placeholder for ReactOnRails to know where to render the store props for
+     client side hydration -->
+    <%= redux_store_hydration_data %>
+    <% if current_user %>
+      <%= render partial: 'footer', media: 'all', 'data-turbolinks-track' => true %>
+    <% else %>
+      <%= render partial: 'pages/shared/footer' %>
+    <% end %>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <% if %w(pages subscriptions).include?(controller.controller_name) && %w(index premium).include?(controller.action_name) %>
+    <script>var stripePubKey="<%=ENV["STRIPE_PUBLIC_KEY"] %>"</script>
+    <script src="https://checkout.stripe.com/checkout.js" >
+          data-key= stripePubKey
+          data-locale="auto">
+    </script>
+    <%end%>
+  </body>
+
+</html>

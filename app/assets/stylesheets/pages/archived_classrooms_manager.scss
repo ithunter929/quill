@@ -1,0 +1,165 @@
+#archived_classrooms_manager {
+  max-width: 990px;
+  padding: 20px;
+  margin: 0 auto;
+  .archive-options-container {
+    margin-bottom: 31px;
+    p {
+      font-size: 16px;
+      margin-right: 10px;
+      max-width: 50%;
+    }
+    .cta-box {
+      a {
+        border: solid 1px #979797;
+        font-size: 14px;
+        margin: 0 5px;
+      }
+    }
+  }
+  .notification-bar {
+    margin-bottom: 40px;
+  }
+  .action-container {
+    img {
+      max-height: 20px;
+    }
+  }
+  .btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-bottom: 21px;
+
+    &.main-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
+  .table {
+    max-width: 950px;
+    width: 100%;
+    border: solid 1px #cecece;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: 30px;
+    thead {
+      background-color: #e6e6e6;
+    }
+    tr.pending-invation {
+
+    }
+    td {
+      width: 30%;
+      svg {
+        margin-right: 4px;
+        margin-bottom: 3px;
+        font-size: 10px;
+        vertical-align: middle;
+      }
+    }
+    tr td:last-of-type:not(.pending-invitation-row), .manage-class, .edit-or-remove a {
+      text-align: right;
+      color: #027360;
+      cursor: pointer;
+      padding-right: 13px;
+      min-width: 117px;
+      span {
+        float: right;
+      }
+      .spinner-container {
+        margin: 0;
+        margin-right: 5px;
+        padding: 0;
+      }
+    }
+    .edit-or-remove a {
+      padding-right: 0;
+    }
+    .pending-invitation-row {
+      text-align: left;
+      color: black;
+      a {
+        padding: 0;
+        font-weight: 600;
+        color: #027360;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .pending_coteachers_row, .pending-invitation-class-name {
+      color: #969696;
+      font-style: italic;
+      td:last-of-type {
+        font-style: normal;
+      }
+    }
+    .transfer-ownership {
+      color: #027360;
+      display: block;
+      font-size: 12px;
+    }
+  }
+  .google-classcode {
+    color: #82bf3c;
+  }
+  .teacher {
+    td {
+      width: 18%;
+    }
+    @media (max-width: 900px) {
+      .student-count, .created-date {
+        display: none;
+      }
+    }
+  }
+}
+
+.invite-coteachers {
+  border-top: solid 1px #e9e9e9;
+  padding-top: 43px;
+  .instructions {
+    padding-bottom: 30px;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  p {
+    font-size: 16px;
+  }
+  th {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .coteacher-invite-status {
+    margin-left: 15px;
+    color: #027360;
+  }
+}
+#coteacher-capability-chart {
+  background: #fff3df;
+  padding: 14px 22px 0;
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px auto 20px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      background: url('https://assets.quill.org/images/icons/check-mark-icon.svg') no-repeat top 4px left;
+	    color: #3b3b3b;
+      font-size: 14px;
+      margin-bottom: 5px;
+      padding-left: 26px;
+    }
+    &.cant-do li {
+      background: url('https://assets.quill.org/images/icons/cross-mark-icon.svg') no-repeat top 3px left 2px;
+      line-height: 1.3;
+    }
+  }
+}

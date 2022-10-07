@@ -1,0 +1,810 @@
+.covid-premium-banner {
+  padding: 16px;
+  background-color: #e1f3f1;
+  text-align: center;
+  p {
+    font-size: 16px;
+    max-width: 656px;
+    margin: 0px auto;
+    a {
+      text-decoration: underline;
+    }
+    &:first-of-type {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.premium-tab {
+  a {
+    background-color: #EA9A1A !important;
+    color: #FFFFFF !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-right: none !important;
+    cursor: pointer !important;
+  }
+
+}
+
+.modal-content {
+  max-width: 700px;
+  .modal-title {
+    margin-left: 40px;
+  }
+}
+
+.quote-request-modal {
+  text-align: center;
+  max-width: 386px;
+  max-height: 230px;
+  height: 100%;
+  width: 100%;
+  .modal-content {
+    border-radius: 6px;
+    padding: 0% 7%;
+  }
+  .modal-body {
+    padding: 28px 0px;
+  }
+  h1 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  p {
+    text-align: center;
+  }
+  a.q-button {
+    padding: 8px 33px 8px;
+    font-size: 14px;
+  }
+  .modal-footer {
+    padding: 18px 0px;
+    span {
+      color: #18b891;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    p {
+      color:  #262626;
+      padding: 3px 0px;
+    }
+  }
+
+}
+li.active.premium-tab > a,
+li.premium-tab > a:hover {
+  background-color: #D3982A !important;
+  // border-top: 3px solid #875A12 !important;
+  // padding-top: 0 !important;
+}
+.premium-tab a.active,
+.premium-tab a:hover {
+  background-color: #D3982A !important;
+  // border-top: 3px solid #875A12 !important;
+  // padding-top: 0 !important;
+}
+
+.premium-page {
+  padding: 0px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  .modal-background {
+    z-index: 5;
+  }
+  .quill-modal {
+    z-index: 6;
+  }
+  .already-has-premium-modal {
+    max-width: calc(100vw - 20px);
+    min-height: min-content;
+    p {
+      margin: 24px 0px 48px;
+      a {
+        color: #00C2A2;
+      }
+    }
+  }
+  .school-and-district-premium-modal {
+    display: flex;
+    min-height: min-content;
+    &.stage-one {
+      padding: 40px 0px 0px;
+      max-width: calc(100vw - 20px);
+      width: min-content;
+      .interactive-wrapper {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+      }
+      .school-and-district-premium-column {
+        margin: 32px 0px;
+        padding: 0px 32px;
+        text-align: left;
+        width: 224px;
+        flex: 1;
+        h2 {
+          height: min-content;
+        }
+        .quill-button {
+          width: 100%;
+        }
+        &:not(:last-of-type) {
+          border-right: 1px solid #E0E0E0;
+        }
+        &:last-of-type {
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+    &.stage-two {
+      flex-direction: column;
+      max-width: 560px;
+      width: calc(100vw - 20px);
+      .dropdown-container {
+        min-height: 42px !important;
+        margin: 36px 0px 24px;
+        justify-content: flex-start;
+        &.input-container.inactive .dropdown__placeholder {
+          display: inline-block;
+        }
+      }
+      p {
+        margin-bottom: 48px;
+      }
+      .school-search-container {
+        width: 100%;
+        border: none;
+        padding: 0px;
+        .input-container {
+          min-height: min-content;
+        }
+        .schools-list-section {
+          margin: 16px 0px;
+          max-width: 100%;
+          .no-school-found, .default-school-search, .list {
+            min-height: 300px;
+          }
+        }
+      }
+    }
+  }
+  .logo-tag  {
+    padding: 25 0 90 0px;
+    text-align: center;
+  }
+  .overview {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    .header {
+      margin: auto;
+      max-width: 656px;
+      h1 {
+        font-weight: 700;
+        margin-bottom: 8px;
+        line-height: 38px;
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+        color: #262626;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .choose-plan {
+    margin-right: 17px;
+    top: 75px;
+    left: 0px;
+    position: relative;
+    z-index: 4;
+    max-width: 360px;
+    padding-right: 8px;
+    display: inline-block;
+    border-radius: 8px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    h2 {
+      font-weight: bold;
+      line-height: 38px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 8px;
+    }
+  }
+  .school-premium-badge-container {
+    margin-top: 20px;
+    text-align: left;
+  }
+  .school-premium-badge {
+    height: 28px;
+    margin-top: 4px;
+    padding: 6px;
+    border-radius: 146.5px;
+    background-color: #eef8f7;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    color: #026f5d;
+    text-align: left;
+    display: inline-block;
+    img {
+      height: 16px;
+      width: 16px;
+    }
+  }
+  .pricing-minis {
+    border: solid 1px #e0e0e0;
+    border-bottom: none;
+    display: flex;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .pricing-mini {
+    background-color: white;
+    border-radius: 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .premium-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .quill-button {
+      width: 100%;
+      &:not(.primary) {
+        margin-bottom: 16px;
+      }
+    }
+    p {
+      font-style: italic;
+      font-size: 12px;
+      line-height: 20px;
+      color: #5C5C5C;
+      margin-top: 4px;
+    }
+  }
+  .promo-tab {
+    width: 239px;
+    height: 28px;
+    padding-top: 7px;
+    font-weight: 600;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #f8a724;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    margin: auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -27px;
+  }
+
+  section {
+    border: none;
+  }
+  h2 {
+    font-size: 20px;
+    height: 52px;
+    margin: 0 0 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.3;
+    color: #262626;
+  }
+  .pricing-info {
+    padding: 16px;
+    h2 {
+      font-size: 16px;
+    }
+    .semibold {
+      font-weight: 600;
+    }
+    .premium-rates {
+      min-height: 90px;
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 24px;
+        line-height: 1.27;
+        color: #262626;
+      }
+      p {
+        margin: 8px 0 24px;
+        line-height: 1.43;
+        color: #5c5c5c;
+      }
+    }
+  }
+}
+.logo-group {
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #000000;
+    margin-bottom: 32px;
+  }
+  .logo-group-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    max-width: 980px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    .logo-wrapper {
+      margin: 5px;
+      &:nth-of-type(1), &:nth-of-type(4n + 1) {
+        margin-left: 0px;
+      }
+      &:nth-of-type(4n) {
+        margin-right: 0px;
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      .logo-wrapper {
+        margin: 5px !important;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      text-align: center;
+
+      #kipp-sf, #kipp-dc, #kipp-la, #houston, #desmoines, #richmond,
+      #elizabeth, #thurston, #lead, #kuemper, #jordan, #princeton {
+        display: none;
+      }
+      .logo-wrapper {
+        margin: initial;
+        display: inline-block;
+      }
+      img {
+        width: 300px;
+      }
+    }
+    /* p {font-size: inherit}*/
+  }
+  @media (max-width: 600px) {
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.features {
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 80px;
+  section {
+    border-style: none;
+    padding: 0px;
+    .row {
+      display: flex;
+      padding: 20px;
+    }
+  }
+  .premium-features-header {
+    margin-bottom: 120px;
+    .img-holder {
+      margin-top: 80px;
+      img {
+        height: 104px;
+        width: 104px;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      padding: 16px 0px 8px;
+      line-height: 1.27;
+    }
+    p {
+      max-width: 656px;
+      display: inline-block;
+      font-size: 16px;
+      color: #262626;
+    }
+  }
+  .premium-features-body {
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.25;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+    p {
+      max-width: 656px;
+      margin: 0px auto;
+      font-size: 16px;
+      color: #262626;
+    }
+    .premium-features-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 96px;
+      margin-top: 56px;
+      .testimonial {
+        padding: 24px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        width: 300px;
+        margin-bottom: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 1.33;
+          color: #5c5c5c;
+        }
+      }
+    }
+    .premium-feature {
+      width: 300px;
+      margin-bottom: 24px;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.38;
+        color: #262626;
+        text-align: left;
+        margin: 16px 0px 8px;
+      }
+      p {
+        text-align: left;
+        color: #5c5c5c;
+      }
+      span {
+        font-size: 12px;
+        line-height: 1.33;
+        text-align: left;
+        display: block;
+        color: #5c5c5c;
+        margin-bottom: 4px;
+        &:last-of-type {
+          margin-bottom: 8px;
+        }
+      }
+      .image-wrapper {
+        position: relative;
+        img {
+          max-width: 300px;
+        }
+        .popular-tag {
+          position: absolute;
+          width: 56px;
+          height: 18px;
+          bottom: 8px;
+          left: 8px;
+          .popular-tag-background {
+            opacity: 0.65;
+            backdrop-filter: blur(10px);
+            background-color: #000000;
+            border-radius: 4px;
+            height: 100%;
+          }
+          .popular-tag-text {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.33;
+            color: #ffffff;
+            position: absolute;
+            top: 2px;
+            left: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#q-and-a {
+  padding: 80px 0px;
+  background-color: white;
+  text-align: center;
+  .q-and-a-inner-wrapper {
+    padding: 0px 10px;
+    h1 {
+      color: black;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .qa-section {
+      color: black;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: none;
+      text-align: left;
+      .question {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .question:focus {
+        outline: none !important;
+      }
+      .answer {
+        color: black;
+        font-size: 16px;
+        padding-bottom: 20px;
+        p {
+          a {
+            color: black;
+          }
+        }
+      }
+      a {
+        text-decoration: underline;
+      }
+      img {
+        height: 24px;
+        width: 24px;
+      }
+      button {
+        border: none;
+        background-color: white;
+        margin-top: 14px;
+      }
+      .expand-or-collapse {
+        align-items: center;
+        margin: 0px;
+      }
+    }
+    .q-and-a-inner-wrapper:last-child div {
+      border-bottom: 1px solid #e0e0e0
+    }
+    .support-link {
+      width: 249px;
+      height: 40px;
+      border-radius: 4px;
+      border: solid 1px #bdbdbd;
+      text-align: center;
+      display: inline-block;
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 0px;
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  .premium-page {
+
+    .overview {
+      height: 2087px;
+      width: 950px;
+
+      .header {
+        margin-bottom: 36px;
+      }
+    }
+
+    .our-commitment {
+      margin-right: 17px;
+      top: 45px;
+      left: 0px;
+      position: relative;
+      z-index: 4;
+      height: 293px;
+    }
+
+    .pricing-minis-container {
+      display: inline-flex;
+      position: sticky;
+      top: -7px;
+      flex-direction: column;
+      height: 375px;
+      width: 572px;
+      align-items: flex-end;
+      z-index: 4;
+      &::after, &:after {
+        content: '';
+        width: 572px;
+        height: 16px;
+        margin: 0px 0px -16px;
+        border-radius: 8px 0px;
+        z-index: 4;
+      }
+      &.show-shadow {
+        &::after, &:after {
+          opacity: 0.07;
+          background-image: linear-gradient(to bottom, #000000, #000000 99%);
+        }
+      }
+      @media (max-width: 600px) {
+        top: 100px;
+      }
+    }
+
+    .pricing-mini {
+      width: 190px;
+      h2, .premium-rates {
+        text-align: left;
+      }
+      &:nth-of-type(2) {
+        border-left: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        border-radius: 0px;
+      }
+    }
+
+    .features {
+      margin-top: 136px;
+      .premium-features-body .premium-features-row .testimonial {
+        height: 184px;
+        &.long {
+          width: 626px;
+          p {
+            font-size: 20px;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+
+    .individual-features-table-container {
+      display: none;
+    }
+
+  }
+}
+
+@media (max-width: 991px) {
+  .premium-page {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .school-and-district-premium-modal {
+      flex-direction: column;
+      max-height: calc(100vh - 72px - 72px);
+      overflow: scroll;
+      &.stage-one {
+        .school-and-district-premium-column {
+          width: calc(100vw - 52px);
+          max-width: 300px;
+          border-right: 0px !important;
+          border-bottom: 1px solid #e0e0e0;
+          padding: 32px 0px;
+          margin: 0px 16px;
+          h2 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    .school-premium-badge-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .school-premium-badge {
+        width: min-content;
+        white-space: nowrap;
+      }
+    }
+
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .overview .header {
+      margin-bottom: 80px;
+    }
+
+    .choose-plan {
+      text-align: center;
+      width: 290px;
+      margin: 0 auto;
+    }
+
+    .pricing-minis-container {
+      width: 100%;
+      margin-top: 125px;
+    }
+
+    .pricing-minis {
+      flex-direction: column;
+      width: 100%;
+      border: none;
+      align-items: center;
+      border: none;
+    }
+
+    .pricing-mini {
+      max-width: 360px;
+      width: 100%;
+      border: solid 1px #e0e0e0;
+      margin-bottom: 32px;
+      h2 {
+        height: min-content;
+        justify-content: center;
+      }
+    }
+
+    .testimonial span {
+      margin-top: 32px;
+    }
+
+    .features {
+      margin-top: 48px;
+    }
+
+    .premium-features-row {
+      flex-direction: column;
+      align-items: center;
+      .premium-feature {
+        margin-bottom: 32px;
+      }
+    }
+
+    .individual-features-table-container {
+      border-top: 1px solid #e0e0e0;
+
+      .interactive-wrapper {
+        font-size: 14px;
+        font-weight: 600;
+        color: #5c5c5c;
+        margin: 14px;
+      }
+
+      .header-row {
+        border-top: 1px solid #e0e0e0;
+        padding: 32px 16px 8px;
+        text-align: left;
+        h3 {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.38;
+          color: #262626;
+        }
+      }
+
+      .label-and-tooltip {
+        display: flex;
+        padding: 16px;
+        justify-content: space-between;
+        border-top: 1px solid #e0e0e0;
+        text-align: left;
+        .quill-tooltip-trigger {
+          width: 16px;
+          margin-left: 16px;
+        }
+        .quill-tooltip {
+          text-align: left;
+        }
+      }
+
+      &.is-open {
+        .interactive-wrapper img {
+          transform: rotate(180deg)
+        }
+      }
+    }
+
+  }
+}

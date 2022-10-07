@@ -1,0 +1,104 @@
+{
+  "name": "Empirical-Core",
+  "description": "Empirical Core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/empirical-org/Empirical-Core.git"
+  },
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": "12.x",
+    "npm": "8.x"
+  },
+  "cacheDirectories": [
+    "client/node_modules"
+  ],
+  "scripts": {
+    "postinstall": "cd ./client && npm install",
+    "gulp": "cd ./client && npm run gulp",
+    "test": "npm run jest && npm run build:test && npm run lint && bundle exec rake spec",
+    "lint": "cd client && npm run lint",
+    "install-react-on-rails": "cd client && npm run install-react-on-rails",
+    "build:clean": "./bin/dev/clean_build_artifacts.sh",
+    "build:test": "cd client && npm run build:test",
+    "build:production:client": "(echo 'prod client assets' && cd client && npm run build:production:client)",
+    "build:production:server": "(echo 'prod server assets' && cd client && npm run build:production:server)",
+    "build:client": "(cd client && npm run build:client --silent)",
+    "build:server": "(cd client && npm run build:server --silent)",
+    "build:dev:client": "(cd client && npm run build:dev:client --silent)",
+    "build:dev:client:prod-cms": "(cd client && npm run build:dev:client:prod-cms --silent)",
+    "build:dev:server": "(cd client && npm run build:dev:server --silent)",
+    "start:dev": "foreman start -f Procfile.static; npm run build:clean",
+    "start:prod-cms": "foreman start -f Procfile.prod_cms; npm run build:clean",
+    "hot-assets": "(cd client && npm run hot-assets)",
+    "jest": "cd client && npm run jest",
+    "jest:u": "cd client && npm run jest -- -u",
+    "jest:update": "cd client && npm run jest -- -u",
+    "jest:watch": "cd client && npm run jest:watch",
+    "jest:coverage": "cd client && npm run jest:coverage",
+    "jest:silent": "cd client && npm run jest:silent",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "react",
+    "rails",
+    "server",
+    "rendering"
+  ],
+  "dependencies": {
+    "foreman": "^3.0.1",
+    "lazysizes": "^5.2.0-beta1",
+    "quill-marking-logic": "0.15.9",
+    "react-csv": "^1.1.2",
+    "react-select": "^1.1.0"
+  },
+  "devDependencies": {
+    "qs": "^6.9.0",
+    "redux-test-utils": "^0.2.2"
+  },
+  "jest": {
+    "roots": [
+      "app"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "./app"
+    ],
+    "globals": {
+      "window": true,
+      "process.env.CDN_URL": "http://cdn.quill.org"
+    },
+    "coverageDirectory": "<rootDir>/coverage/",
+    "collectCoverage": false,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test_data/"
+    ],
+    "testPathIgnorePatterns": [
+      "test_data.js"
+    ]
+  }
+}

@@ -1,0 +1,534 @@
+#my-account, #staff-teacher-account-editor, .user-profile-editor {
+  margin-bottom: 50px;
+  h3 {
+    margin: 30px 0px;
+  }
+  .newsletter-row {
+    display: flex;
+    p {
+      font-size: 14px;
+      line-height: 1;
+      color: #646464;
+      margin-left: 26px;
+      text-align: left;
+    }
+  }
+  .form-row {
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+    &.email-row {
+      position: relative;
+    }
+    .form-button {
+      margin-left: 25px;
+    }
+  }
+  .form-label {
+    width: 150px;
+  }
+  .form-input {
+    input {
+      width: 300px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      border: solid 1px #e9e9e9;
+      &.inactive {
+        background-color: #F7F5F5;
+        border: dashed 1px #969696;
+      }
+    }
+  }
+  .dropdown-menu {
+    max-height: 300px;
+    overflow: scroll;
+  }
+  .dropdown-toggle.btn.btn-default {
+    width: 300px;
+  }
+  .error {
+
+  }
+  .gray-text {
+    color: #969696;
+    .row {
+      margin-left: 152px;
+    }
+  }
+  .get-premium {
+    color: white;
+    background-color: #f8a724;
+    width: 137px;
+  }
+  .add-school {
+    width: 137px;
+  }
+  .save-button {
+    border-radius: 3px;
+  }
+
+  .form {
+    margin-bottom: 40px;
+  }
+
+  a.q-button {
+    width: 147px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px;
+    margin-top: 0;
+    border: 0;
+    height: 42px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+  }
+
+  .google-classroom-warning {
+    padding: 14px 17px;
+    position: absolute;
+    top: 0px;
+    left: 476px;
+    width: 400px;
+    height: 100px;
+    background-color: #fcf2e1;
+    border: solid 1px rgba(245, 186, 91, 0.41);
+    display: flex;
+    i, svg {
+      margin-top: 3px;
+      margin-right: 5px;
+      color: #ea9a1a;
+      font-size: 21px;
+    }
+    a {
+      color: #027360;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+  }
+
+  .error {
+    margin-left: 10px;
+    color: $quillred;
+  }
+
+  .delete-account {
+    font-size: 16px;
+  }
+
+  .delete-account, .switch-account-type {
+    cursor: pointer;
+    font-weight: 600;
+    color: #027360;
+    text-decoration: underline;
+  }
+  .remove-from-class {
+  //   width: 186px;
+    font-weight: bold;
+  }
+  .edit-password-link {
+    color: $quillforestgreen;
+    margin-left: 3px;
+  }
+  // .modal-dialog {
+  //   .modal-header {
+  //     min-height: 59px;
+  //   }
+  //   .account-form {
+  //     margin-bottom: 50px;
+  //   }
+  //   .close {
+  //     background-color: black;
+  //   }
+  //   .form-label, #zip{
+  //     float: none;
+  //     height: inherit;
+  //   line-height: inherit;
+  //   }
+  //   .row {
+  //     padding: 0px;
+  //   }
+  //   #select_school {
+  //     width: 50%;
+  //   }
+  // }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #my-account, #staff-teacher-account-editor, .user-profile-editor {
+    .row {
+      input {
+        line-height: normal;
+      }
+    }
+  }
+}
+
+// @media (max-width: 767px) {
+//   #my-account {
+//     .form-row {
+//       display: flex;
+//       align-items: center;
+//       &.email-row {
+//         position: relative;
+//       }
+//       .form-button {
+//         margin-left: 4%;
+//       }
+//     }
+//     .form-label {
+//       width: 110% !important;
+//     }
+//     .form-input {
+//       input {
+//         margin-left: -125%;
+//         width: 225%;
+//         height: 40px;
+//         border-radius: 3px;
+//         background-color: #ffffff;
+//         border: solid 1px #e9e9e9;
+//         &.inactive {
+//           width: 100%;
+//           background-color: #F7F5F5;
+//           border: dashed 1px #969696;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 767px) {
+  #my-account {
+    span {
+      div {
+        div {
+          a {
+            margin-left: 29% !important;
+          }
+        }
+      }
+    }
+    div {
+      div {
+        div {
+          button {
+            margin-left: 29% !important;
+          }
+        }
+      }
+    }
+    .form-row {
+      display: grid;
+      grid-template-areas: 20% 80%;
+      &.email-row {
+      }
+      .form-button {
+        margin-left: 25px;
+      }
+    }
+    .form-label {
+      width: 150px;
+    }
+    .form-input {
+      input {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        border: solid 1px #e9e9e9;
+        &.inactive {
+          background-color: #F7F5F5;
+          border: dashed 1px #969696;
+        }
+      }
+    }
+  }
+}
+
+.user-account {
+  padding: 40px 0px;
+}
+
+.user-account-section {
+  max-width: 577px;
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 38px 32px 0px;
+  margin-bottom: 24px;
+  .secondary {
+    cursor: pointer;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 42px;
+  }
+  .input-container {
+    margin-bottom: 20px;
+    &.unacknowledged {
+      margin-bottom: 0px;
+    }
+    &.active.not-editable {
+      margin-bottom: 71px;
+    }
+  }
+  .school-container, .inactive-password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .school, .not-a-password {
+      input {
+        border-bottom: none;
+      }
+    }
+    .school input {
+      width: 400px;
+    }
+    .not-a-password input {
+      max-width: 300px;
+      width: 100%;
+    }
+    .change-password, .change-school {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.57;
+      color: #009a80;
+      margin-bottom: 7px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  .school-search-container {
+    border: none;
+    padding: 0px;
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 22px 0px 16px;
+    .secondary {
+      width: 80px;
+      margin-right: 24px;
+    }
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    span {
+      line-height: 1.57;
+    }
+  }
+  .quill-checkbox {
+    margin-top: 2px;
+    margin-right: 24px;
+  }
+  @media (max-width: 580px) {
+    margin: 0px 15px 24px;
+    width: calc(100% - 30px);
+  }
+}
+
+.user-account-general {
+  .primary {
+    width: 127px;
+  }
+  .google-or-clever {
+    border-bottom: none !important;
+    margin-bottom: 32px;
+    input {
+      border-bottom: none !important;
+      padding: 0px !important;
+    }
+  }
+}
+
+.user-account-password {
+  .primary {
+    width: 156px;
+  }
+  .google-or-clever-password {
+    color: #646464;
+    margin-bottom: 40px;
+  }
+  .current-password-section {
+    margin-bottom: 10px;
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #009a80;
+    }
+    .current-password {
+      margin-bottom: 5px;
+    }
+    .interactive-wrapper {
+      margin-top: 15px;
+    }
+  }
+  @media (max-width: 370px) {
+    .button-section {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      .secondary {
+        margin-right: 0px;
+      }
+      .primary {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.user-linked-accounts {
+  padding-bottom: 42px;
+  hr {
+    width: 576px;
+    margin: 25px 0px 25px -32px;
+    height: 1px;
+  }
+  .post-assignments {
+    color: #646464;
+    margin-top: 17px;
+    margin-right: 18px;
+  }
+  .google-row, .clever-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .first-half {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      color: #646464;
+    }
+    .google-or-clever-action {
+      font-weight: 600;
+      color: #009a80;
+      cursor: pointer;
+    }
+  }
+  .clever-row img {
+    margin-right: 19px;
+  }
+  .google-row img {
+    margin-right: 21px;
+  }
+}
+
+.modal-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0.5;
+  background-color: #000;
+}
+
+.unlink-modal, .delete-account-modal {
+  width: 560px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  z-index: 100;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  display: block;
+  h1 {
+    margin-bottom: 24px;
+  }
+  p {
+    line-height: 1.57;
+    color: #646464;
+    margin-bottom: 32px;
+  }
+  .checkboxes {
+    margin-bottom: 26px;
+    padding-top: 12px;
+  }
+  &.google {
+    height: 484px;
+    .primary {
+      width: 129px;
+    }
+    .quill-checkbox {
+      &.selected {
+        width: 23px;
+      }
+      &.unselected {
+        width: 21px;
+      }
+    }
+  }
+  &.clever {
+    height: 552px;
+    .primary {
+      width: 125px;
+    }
+  }
+  &.delete-account-modal {
+    height: 382px;
+    .primary {
+      width: 138px;
+    }
+    p {
+      padding-top: 6px;
+      margin-bottom: 23px;
+    }
+    .checkbox-row {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.teacher-account-email-notifications {
+  padding-bottom: 34px;
+  span {
+    color: #646464;
+  }
+}
+
+.teacher-account-danger-zone {
+  .secondary {
+    width: 162px;
+  }
+  .danger-zone-description {
+    color: #646464;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.third-party-integration-explanation {
+  background-color: #EEEEEE;
+  border-color: #EEEEEE;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    h4 {
+      font-weight: bold;
+    }
+  }
+  .text {
+    color: #646464;
+    margin: 0px 30px 40px 0px;
+  }
+}
+
+input[id*="-not-editable"] {
+  border-color: white!important;
+}

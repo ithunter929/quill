@@ -1,0 +1,76 @@
+<% unless Rails.env.development? || Rails.env.test? || Rails.env.cypress? %>
+  <!-- start Segment.io -->
+  <script type="text/javascript">
+
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("<%= ENV["SEGMENT_WRITE_KEY"] %>", {
+        integrations: {
+          all: true
+
+          <%#= We're using user_is_trackable_teacher? as a proxy for Vitally
+               since the conditions are basically the same (teachers only).
+               If we shouldn't load Intercom, then we shouldn't send any
+               events to Vitally, either. %>
+          <% unless user_is_trackable_teacher? %>
+          , Intercom: false
+          , Vitally: false
+          , Heap: false
+          <% end %>
+        }
+      }
+    );
+    <%# There are three cases here:
+      #   1) we know the currently logged-in user,
+      #   2) the user literally just logged out, and the controller let us know
+      #   3) this is an anonymous user, in which case we don't do anything special at all
+    %>
+    <% if user_is_trackable_teacher? %>
+      analytics.identify(<%= raw(generate_segment_identify_arguments(current_user)) %>);
+      <% if current_user.school %>
+        analytics.group("<%= raw(current_user.school.id) %>", {
+          name: "<%= raw(current_user.school.name) %>"
+        })
+      <% end %>
+    <% else %>
+      analytics.reset()
+    <% end %>
+
+    <% if current_user&.teacher? %>
+      analytics.page();
+    <% end %>
+
+    <% if user_is_trackable_teacher? %>
+
+      setInterval(function() {
+        if (typeof Intercom !== 'undefined') {
+          Intercom('update');
+        }
+      }, 30000)
+
+      // In addition to loading Intercom, we're using "user_is_trackable_teacher?" as a proxy for
+      // "this is a teacher user". Our integration with Vitally suppresses .page()
+      // calls.  This means that we need to track pageviews for Vitally with explicit
+      // calls to `analytics.track()`.  But we only need to send this data to Vitally.
+      analytics.track(`Vitally Pageview`, {}, {
+        integrations: {
+          All: false,
+          Vitally: true
+        }
+      });
+    <% else %>
+      // In case a teacher was signed in on this computer and set the Intercom
+      // localStorage, and then a student logged into this computer, let's
+      // explicitly tell Intercom to shut it down so the student does not
+      // see Intercom.
+      window.onload = function() {
+        if (typeof Intercom !== 'undefined') {
+          Intercom('shutdown');
+        }
+      };
+    <% end %>
+  }}();
+  </script>
+  <!-- end Segment.io -->
+  <%= render partial: 'application/coview' if user_is_trackable_teacher? %>
+  <%= render partial: 'application/ortto' if user_is_trackable_teacher? %>
+<% end %>

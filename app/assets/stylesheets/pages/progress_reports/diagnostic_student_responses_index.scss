@@ -1,0 +1,100 @@
+.diagnostic-individual-pack main.student-responses-index-container {
+  .data-table-container {
+    overflow: scroll;
+  }
+  .data-table {
+    overflow: hidden;
+    border-radius: 8px;
+    border: solid 1px #e0e0e0;
+    margin-top: 24px;
+    .data-table-headers {
+      height: 32px;
+    }
+    &.hide-on-mobile {
+      &.pre-test {
+        width: 650px;
+      }
+      &.post-test {
+        width: 770px;
+      }
+    }
+    .individual-responses-header {
+      margin-right: 0px;
+    }
+    .individual-responses-link {
+      text-overflow: unset;
+      overflow: visible;
+      position: relative;
+      margin-right: 0px;
+      height: 100%;
+      a {
+        margin: 8px 0px;
+      }
+      .name-section-subheader {
+        position: absolute;
+        top: 36%;
+        right: 0px;
+      }
+    }
+    .name-section-subheader {
+      font-size: 12px;
+      line-height: 1.33;
+      color: #808080;
+    }
+    .skills-delta {
+      color: #367300;
+      img {
+        margin-right: 1px;
+      }
+    }
+  }
+
+  .toggle-explanation {
+    max-width: 770px;
+    margin-top: 20px;
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  @media (max-width: 930px) {
+    padding: 40px 16px;
+    .proficiency-keys {
+      flex-direction: column;
+      .proficiency-key {
+        margin-right: 0px;
+        margin-bottom: 16px;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+    .data-table {
+      .data-table-headers, .data-table-row {
+        padding-right: 0px;
+      }
+      .data-table-row {
+        height: min-content;
+      }
+      .score-section, .score-header {
+        margin-right: 0px;
+      }
+      .name-section, .name-header {
+        width: 100% !important;
+      }
+      .name-section {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0px;
+        .name-section-subheader {
+          margin-top: 4px;
+        }
+      }
+      .score-section span {
+        margin-left: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+
+   Tooltips
+   ========================================================================== */
+
+.tooltip.in {
+  opacity: 1;
+}
+
+#activity-planner #activities_table .tooltip.top .tooltip-arrow {
+  border-top-color: #cecece;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #cecece;
+}
+
+.tooltip-arrow::after {
+  left: -10px;
+  content: "\f0d7";
+  font-size: 37px;
+  position: absolute;
+  bottom: -20px;
+  color: #c0c0c0;
+  z-index: -1;
+  font-family: "Font Awesome 5 Pro";  /* updated font-family */
+  font-weight: 900; /* regular style/weight */
+}
+
+.react-lightbox, .react-lightbox-modal {
+  height: 200px;
+  width: 200px;
+}
+
+.tooltip .concept-class {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

@@ -1,0 +1,13 @@
+<%= react_component('ActivityFormIndex', props: {
+  activity: @activity,
+  activityClassification: @activity_classification,
+  contentPartnerOptions: ContentPartner.all.sort_by(&:name),
+  activityCategoryOptions: ActivityCategory.all.sort_by(&:name),
+  standardOptions: Standard.all.sort_by(&:name),
+  rawScoreOptions: @raw_score_options,
+  passedTopicOptions: Topic.all.sort_by(&:name),
+  flagOptions: Activity::FLAGS,
+  followUpActivityOptions: Activity.all.sort_by { |a| a.name || '' },
+  rawScoreToReadabilityGradeBands: @raw_score_to_readability_grade_band,
+  readabilityGradeBandToMinimumGradeLevel: @readability_grade_band_to_minimum_grade_level
+}) %>

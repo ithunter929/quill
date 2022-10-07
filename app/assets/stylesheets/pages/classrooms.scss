@@ -1,0 +1,449 @@
+.import-from-clever-button.loading,
+.import-from-google-button.loading {
+  background-color: #f5f5f5;
+}
+
+.import-from-clever-button-icon,
+.import-from-google-button-icon {
+  margin-right: 8px;
+  margin-left: 16px;
+}
+
+.classrooms-page {
+  padding-top: 40px;
+
+  &.archived-classrooms {
+    .header {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 14px;
+        line-height: 1.57;
+        color: #646464;
+      }
+    }
+  }
+
+  .name, .last-name, .first-name {
+    &.inactive:not(.has-text) {
+      label {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .input-container.disabled {
+    input {
+      border-bottom: none;
+    }
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    .quill-checkbox {
+      margin-right: 24px;
+    }
+    span {
+      line-height: 1.57;
+    }
+  }
+
+  h1, h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+  .buttons {
+    display: flex;
+    .create-a-class-button {
+      margin-left: 24px;
+    }
+  }
+  .no-active-classes {
+    img {
+      margin: 32px 0px 16px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: normal;
+    }
+    p {
+      margin: 8px 0px 32px;
+      font-size: 16px;
+      line-height: normal;
+      max-width: 460px;
+    }
+  }
+
+  .archived-classes {
+    .classroom {
+      .students-section.empty {
+        h3 {
+          margin-bottom: 0px;
+        }
+      }
+      h3 {
+        margin-bottom: 32px;
+      }
+      .teacher-section-header {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .coteacher-invitation {
+    height: 122px;
+    border-radius: 6px;
+    border: solid 1px #e0e0e0;
+    padding: 32px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    .coteacher-invitation-content {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-size: 14px;
+        line-height: 1.57;
+        color: #646464;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        color: #009a80;
+        cursor: pointer;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .quill-snackbar {
+    z-index: 5;
+  }
+
+  .google-or-clever-note-of-explanation {
+    height: 174px;
+    border-radius: 6px;
+    background-color: #eeeeee;
+    padding: 40px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    .google-or-clever-note-of-explanation-text {
+      max-width: 600px;
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        line-height: 1.63;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.57;
+        color: #646464;
+      }
+    }
+  }
+
+
+  // this is stuff that should be coming from the component library but is not working right now
+  .character-limit {
+    color: #7f7f7f;
+  }
+
+  .has-character-limit:not(.error) {
+    height: 65px;
+  }
+
+  .data-table {
+    padding-right: 0px;
+    .removable {
+      margin-right: 0px;
+      padding: 0px !important;
+      background-color: transparent;
+      img {
+        cursor: pointer;
+      }
+    }
+    .data-table-headers {
+      width: 100%;
+    }
+    .data-table-row {
+      .data-table-row-section {
+        button {
+          min-width: 30px;
+          background-color: white;
+        }
+        button:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+    .data-table-row:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .quill-button:focus, .quill-button:hover {
+    text-decoration: none;
+  }
+
+  .actions-button {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    width: 48px;
+    height: 24px;
+    border: solid 1px #bdbdbd;
+  }
+
+  .actions-header, .actions-section {
+    margin-right: 0px !important;
+  }
+
+  .actions-menu-container {
+    position: absolute;
+  }
+
+  .actions-menu {
+    padding: 8px 0px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 6px 10px 0 rgba(0, 0, 0, 0.14);
+    background-color: white;
+    width: 207px;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    right: -73px;
+    span {
+      width: 207px;
+      height: 48px;
+      display: flex;
+      color: #000;
+      font-size: 16px;
+      align-items: center;
+      padding: 0px 16px;
+      font-weight: normal;
+      cursor: pointer;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+
+  .quill-button.primary.outlined {
+    &:hover, &:focus {
+      font-weight: 600;
+    }
+  }
+
+  .data-table::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  .data-table-headers, .data-table-row {
+    min-width: min-content;
+  }
+}
+
+.sortable-classroom, .classrooms-page .list-item {
+  display: flex;
+  align-items: baseline;
+  width: 992px;
+  margin-left: -38px;
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .reorder-classroom-item {
+    margin-right: 16px;
+  }
+}
+
+.classroom {
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px #e0e0e0;
+  background-color: #ffffff;
+  margin-bottom: 24px;
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  .show-overflow {
+    overflow: visible !important;
+  }
+  .classroom-card-header, .students-section, .teacher-section {
+    padding: 32px;
+  }
+  .classroom-card-header {
+    height: 122px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .classroom-data {
+    margin-top: 4px;
+    .item {
+      line-height: 1.57;
+      color: #646464;
+      margin-right: 8px;
+      .text-and-icon-wrapper {
+        display: inline-flex;
+        align-items: center;
+      }
+      &.bullet {
+        color: #bdbdbd;
+      }
+    }
+    .quill-tooltip b {
+      text-decoration: underline;
+    }
+  }
+  .class-settings, .students-section {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .class-settings {
+    padding: 0px 32px 32px;
+    &.coteacher-class-settings {
+      h3 {
+        margin-bottom: 8px;
+      }
+      .coteacher-note {
+        line-height: 1.57;
+        color: #646464;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .class-settings-buttons {
+    display: flex;
+    .quill-button {
+      margin-right: 16px;
+    }
+  }
+  .invite-clever-classroom-students,
+  .invite-google-classroom-students {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-weight: 600;
+      line-height: 1;
+      color: #7f7f7f;
+      font-size: 12px;
+    }
+  }
+  .invite-clever-classroom-students,
+  .invite-google-classroom-students {
+    align-items: flex-end;
+    margin-bottom: 20px;
+    span {
+      margin-top: 8px;
+    }
+    .quill-button {
+      width: 255px;
+    }
+  }
+  .invite-quill-classroom-students {
+    margin-bottom: 40px;
+    .quill-button {
+      width: 128px;
+    }
+  }
+  .no-students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 58px;
+    p {
+      font-size: 14px;
+      line-height: 1.57;
+      margin-top: 24px;
+      color: #646464;
+      max-width: 528px;
+      text-align: center;
+    }
+  }
+  .students-section-header, .teacher-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .teacher-section-header {
+    margin-bottom: 26px;
+    .quill-button {
+      width: 148px;
+    }
+  }
+  .students-section-header.with-students {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    .students-section-header-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 76px;
+      div {
+        display: flex;
+        .quill-button {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  .student-actions-dropdown {
+    width: 200px;
+    height: 91px;
+    justify-content: flex-start;
+    .dropdown {
+      font-size: 16px;
+    }
+    .dropdown__menu-list {
+      padding: 8px 0px;
+      .dropdown__option {
+        height: 48px;
+        padding: 0px 12px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &.open {
+    .expand-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sortable-classroom, .classrooms-page .list-item {
+    display: flex;
+    align-items: baseline;
+    width: 762px;
+    margin-left: -38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sortable-classroom, .classrooms-page .list-item {
+    display: flex;
+    align-items: baseline;
+    width: auto;
+    margin-left: 0px;
+  }
+}

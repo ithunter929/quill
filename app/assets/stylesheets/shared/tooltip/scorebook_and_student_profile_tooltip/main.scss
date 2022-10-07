@@ -1,0 +1,107 @@
+.scorebook-tooltip, .student-profile-tooltip {
+
+  i, svg {
+    position: absolute;
+    top: -20px;
+    left: 146px;
+    font-size: 34px;
+    color: #f4f2f2;
+    &.border-color {
+      top: -22px;
+      z-index: -10;
+      color: #cecece;
+    }
+  }
+
+  .main {
+    padding: 0px 15px;
+     p {
+       padding-top: 6px;
+     }
+    .concept-stats {
+      width: 280px;
+      font-size: 13px;
+      padding: 0px;
+      margin: 0px;
+      color: #000000;
+      .row, .tooltip-message {
+        margin: 0px;
+
+        padding: 4px 0px;
+        &:not(:nth-last-child(2)) {
+          border-bottom: 1px solid $lightgray;
+        }
+      }
+
+      .tooltip-message {
+        font-size: 13px;
+        color: #969696;
+      }
+
+
+      .row {
+        display: flex;
+        align-items: center;
+
+        .correct-answer, .incorrect-answer {
+          font-weight: 700;
+          text-align: right;
+          line-height: 18px;
+        }
+
+        .correct-answer {
+          color: $darkgreen2;
+        }
+        .incorrect-answer {
+          color: $darkred;
+        }
+      }
+    }
+    .total-score {
+      text-align: center;
+    }
+
+    .tooltip-message {
+      text-align: center;
+    }
+
+    .tooltip-score-time-data {
+      font-size: 13px;
+      color: #3b3b3b
+    }
+
+    .activity-details {
+      font-size: 13px;
+      &.no-concept-results {
+        border-top: 0px;
+      }
+      .activity-detail {
+        .activity-detail-title {
+          font-weight: 800;
+          margin-right: 5px;
+          &.objective-title {
+            font-size: 14px;
+            .app-icon-tooltip {
+              clear:none;
+              float:left;
+              height: 14px;
+              width: 14px;
+              margin-top: 1.2px;
+              margin-right: 5px;
+              background-repeat: no-repeat;
+              &.grammar-icon-tooltip {
+                background-image: image-url('icons/grammar_icon_tooltip.png');
+              }
+              &.proofreader-icon-tooltip {
+                background-image: image-url('icons/proofreader_icon_tooltip.png');
+              }
+            }
+          }
+        }
+        .activity-detail-body {
+          color: $darkgray;
+        }
+      }
+    }
+  }
+}

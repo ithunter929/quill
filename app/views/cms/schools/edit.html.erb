@@ -1,0 +1,37 @@
+<div class='container'>
+  <article class='simple-rounded-box cms-container'>
+    <%= link_to 'School Directory', cms_schools_path %> > <%= link_to @school.name, cms_school_path(@school.id) %> > Edit
+    <br /><br />
+    <h2>Edit: <%= @school.name %></h2>
+    <br />
+    <p><strong>Warning: Please don't edit the school info unless you are 100% sure it needs to be changed.</strong></p>
+    <br /><strong>Notes:
+    <ul>
+      <li>State is just initials (e.g. NY)</li>
+      <li>Private schools don't have a district.</li>
+      <li>Charter schools should have the charter network name as district.</li>
+      <li>Free and Reduced Price lunch is just a number (e.g. 75 &mdash; not 75%).</li>
+      <li>For zipcodes that start with 0, please do not omit the 0.</li>
+    </strong></ul><br />
+    <div class='cms-form'>
+      <%= form_for @school, url: cms_school_path(@school.id) do |f| %>
+        <% @editable_text_attributes.each do |attribute_name, attribute_field| %>
+          <div class='cms-form-row'>
+            <%= f.label attribute_field, attribute_name %>
+            <%= f.text_field attribute_field, autocomplete: 'off' %>
+          </div>
+        <% end %>
+        <div class='cms-form-row'>
+          <%= f.label :district_id, 'District' %>
+          <%= f.collection_select :district_id, District.order(:name), :id, :name, include_blank: false %>
+        </div>
+
+        <%= f.hidden_field :id %>
+
+        <div class='cms-submit-row'>
+          <%= f.button "Save", class: 'button-green' %>
+        </div>
+      <% end %>
+    </div>
+  </article>
+</div>

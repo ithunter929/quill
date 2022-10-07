@@ -1,0 +1,48 @@
+$leftPadding: 180px;
+
+// Ported from the old Quill design.
+.simple-rounded-box {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  @include pie-clearfix;
+
+  .l-section {
+    border-top: 1px solid #ccc;
+    &:first-child, &.first { border-top: none ; padding-top: 0 }
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+  }
+
+  .form-horizontal-header {
+    margin-left: $leftPadding;
+  }
+
+  .box-full-form {
+    margin-bottom: 0;
+
+    .control-group {
+      padding-left: $leftPadding;
+    }
+
+    .form-actions {
+      margin: 0 -20px -20px -20px;
+    }
+
+    &.form-horizontal .form-actions {
+      padding-left: $leftPadding + 20px;
+    }
+  }
+}
+
+article.simple-rounded-box,
+article.extra-padding {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &.activity-form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}

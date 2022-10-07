@@ -1,0 +1,104 @@
+.cms-unit-templates, .cms-activity-classifications {
+  &.index-container {
+    background-color: white;
+    padding: 24px;
+  }
+  .unit-template-inputs {
+    .upper-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .new-unit-template-button {
+        margin-left: 52px;
+      }
+      .activity-or-pack-search-container {
+        margin-right: 16px;
+      }
+      .search-box {
+        margin-right: 8px;
+      }
+    }
+  }
+  .activity-packs-table {
+    table {
+      width: 95vw;
+      .unit-template-activity-row-table {
+        width: 95vw;
+        margin-left: 24px;
+        .data-table-headers {
+          padding: 16px;
+        }
+        .data-table-body {
+          .data-table-row {
+            height: auto;
+            padding: 16px;
+            .data-table-row-section {
+              white-space: break-spaces;
+              &.tabbable-field {
+                overflow: inherit;
+              }
+              &.ccss-section {
+                white-space: inherit;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .action-button {
+    color: #00c2a2;
+    text-align: left;
+  }
+  button:hover {
+    text-decoration: underline;
+  }
+  .save-button {
+    margin-left: 10px;
+  }
+  .sortable-table {
+    width: 100%;
+    border: #cecece 1px solid;
+    .header {
+      padding: 6px;
+      border-bottom: 1px solid #cecece;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      span:first-of-type {
+        flex: 2;
+      }
+      span:last-of-type {
+        flex: 1;
+      }
+    }
+    .list {
+      background-color: white;
+      .list-item {
+        display: inherit;
+        width: auto;
+        margin-left: 0px;
+        padding: 6px;
+        border-bottom: 1px solid #cecece;
+        justify-content: space-between;
+        font-size: 16px;
+        tr {
+          display: flex;
+          justify-content: space-between;
+          td:first-of-type {
+            flex: 2;
+          }
+          td:last-of-type {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cms-unit-template-editor {
+  background-color: white;
+}

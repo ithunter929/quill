@@ -1,0 +1,212 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+ruby '2.7.6'
+
+# CORE DEPS
+gem 'rails', '6.1.6'
+gem 'puma', '~> 5.6.4'
+
+# EARLY TO APPLY TO OTHER GEMS
+gem 'dotenv-rails', '~> 2.6'
+
+# DB/MODEL
+gem 'pg', '1.4.2'
+gem 'ancestry', '~> 3.0.5'
+gem 'ranked-model', '~> 0.4.3'
+gem 'rails_admin', '~> 2.2'
+gem 'bulk_insert', '~> 1.7'
+gem 'atomic_arrays', '~> 1.1.0'
+
+# USER AUTH, ETC
+gem 'bcrypt', '~> 3.1.12'
+gem "doorkeeper", "5.0.3"
+gem 'omniauth', '~> 1.9'
+gem 'omniauth-google-oauth2', '0.6.0'
+gem 'omniauth-clever', '~> 1.2'
+gem 'omniauth-rails_csrf_protection'
+gem 'cancancan', '~> 2.3'
+gem 'firebase_token_generator'
+gem 'rack-attack', '~> 6.3'
+
+# EMAIL
+gem 'premailer-rails'
+gem 'nokogiri', '>= 1.13.2'
+
+# VALIDATIONS
+gem 'validates_email_format_of'
+
+# CONTROLLERS
+gem 'responders'
+
+# UPLOADS
+gem "aws-sdk-s3", "~> 1.48"
+gem 'carrierwave', '~> 1.3.2'
+gem 'fog-aws'
+
+# TIME
+gem 'tzinfo'
+gem 'tzinfo-data'
+gem 'ziptz'
+gem 'geocoder'
+
+# OTHERS
+gem 'global'
+gem 'google-api-client', '0.8.6'
+gem 'faraday_middleware'
+gem 'newrelic_rpm', '~> 7.2'
+gem 'stripe', '~> 5.30'
+gem 'prawn'
+gem 'prawn-table'
+gem 'pdf-core'
+gem 'pdf-inspector'
+gem 'ttfunk'
+gem 'scout_apm'
+gem 'rubyzip', '~> 1.3.0'
+gem 'httparty', '~> 0.16'
+gem 'intercom', '~> 3.5.23'
+gem 'haversine'
+gem 'configs'
+gem 'rack-test', '~> 0.6.3'
+gem 'secure_headers', '6.3.2'
+
+# Engines
+gem 'evidence', path: 'engines/evidence'
+
+# WEBSOCKETS
+gem 'pusher', '~> 1.3'
+gem 'websocket-driver', '0.6.5'
+
+# PARSING
+gem 'parslet'
+gem 'redcarpet', '~> 3.5.1'
+gem 'addressable'
+
+# QUEUE/CACHE
+source "https://gems.contribsys.com/" do
+  gem 'sidekiq-pro'
+end
+gem 'sidekiq', '~> 5.2.10'
+gem 'sidekiq-retries', require: false
+gem 'redis', '~> 4.5'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+gem 'actionpack-action_caching'
+
+# JS/APP/UI
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'jbuilder'
+gem 'active_link_to'
+
+# METRICS
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
+
+# API
+gem 'active_model_serializers', '~> 0.10.13'
+gem 'graphql'
+
+# UI HELPERS
+gem 'sass'
+gem 'sass-rails'
+gem 'bootstrap-sass', '~> 3.4.1'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'slim-rails'
+
+gem 'es5-shim-rails'
+# Use the exact gem version to match npm version of react-on-rails
+gem 'react_on_rails', '= 11.3.0'
+gem 'webpacker', '~> 3.0.0'
+
+# ASSET/UI
+gem 'uglifier', require: false
+gem 'kaminari', '~> 1.2.1'
+gem 'sprockets', '~> 3.7.2'
+
+# MIDDLEWARE
+gem 'rack-cache', '~> 1.6.1', require: 'rack/cache'
+gem 'rack-cors', require: 'rack/cors'
+gem 'rack-host-redirect'
+gem 'rack-affiliates', '= 0.4.0'
+
+# DEPLOYMENT
+gem 'sentry-raven', '>= 0.12.2'
+gem 'rack-heartbeat'
+
+# INTEGRATIONS
+gem 'clever-ruby', '~> 2.0.1'
+
+# Memory profiling
+gem 'puma_worker_killer'
+
+# temp for migrations
+gem 'paperclip'
+
+# TBD
+gem 'rb-readline'
+gem 'awesome_print'
+
+group :production, :staging do
+  gem 'rails-autoscale-web'
+  gem 'rails-autoscale-sidekiq'
+  gem 'lograge'
+  gem 'sqreen'
+end
+
+group :development do
+  gem 'bullet'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'foreman'
+  gem 'graphiql-rails'
+  gem 'letter_opener'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'annotate'
+end
+
+group :test, :development do
+  gem 'parallel_tests'
+  gem 'pry', '~> 0.13.1'
+  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'pry-stack_explorer'
+  gem 'pry-coolline'
+  gem 'pry-rescue'
+  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 5.0'
+  gem 'factory_bot_rails', '~> 4.8.2', require: false
+  gem 'timecop'
+  gem 'byebug'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-shell'
+  gem 'terminal-notifier-guard'
+  gem 'rspec-retry'
+  gem 'rspec-redis_helper'
+  gem 'brakeman', '= 4.1.1'
+end
+
+group :test, :development, :cypress do
+  gem 'cypress-on-rails', '~> 1.0'
+  gem 'faker'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'mini_racer', '= 0.4.0'
+  gem 'fakeredis', '~> 0.7.0'
+  gem 'rails-controller-testing'
+  gem 'selenium-webdriver', '~> 3'
+  gem 'shoulda-matchers', '~> 4'
+  gem 'shoulda-callback-matchers', '~> 1.1.1'
+  gem 'super_diff', require: false
+  gem 'vcr'
+  gem 'webmock'
+end
